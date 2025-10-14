@@ -1,24 +1,30 @@
-def syllableCheck(phrase, totalSum):
+def syllableCheck(phrase, syllables):
+    if(phrase == "" and syllables == 0):
+        return True
+    if(phrase != "" and syllables == 0):
+        return False
     for s in myList:
-        if phrase.StartsWith(s):
+        if phrase.startswith(s):
+            if(syllableCheck(phrase[len(s):].strip(), syllables - 1)):
+                return True
+    return False
 
-    if phrase in myList:
-        return totalSum
-    
+
+
 
 
 
 numLines = int(input())
 myList = []
-numS1 = 0
-numS2 = 0
-numS3 = 0
 for x in range(numLines):
     myList.append(input())
+line1 = syllableCheck(input(), 5)
+line2 = syllableCheck(input(), 7)
+line3 = syllableCheck(input(), 5)
 
 
 
-if(numS1 == 5 and numS2 == 7 and numS3 == 5):
+if(line1 and line2 and line3):
     print("haiku")
 else:
     print("come back next year")
