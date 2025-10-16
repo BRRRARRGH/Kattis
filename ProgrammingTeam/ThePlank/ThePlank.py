@@ -1,5 +1,5 @@
 numWays = 0
-def checkLength(length):
+def checkLength(length) -> None:
     global numWays
     if(length == 0):
         numWays += 1
@@ -14,4 +14,3 @@ def checkLength(length):
 numMeter = int(input())
 checkLength(numMeter)
 print(numWays)
-# x * 1 + y * 2 + z * 3 = numMeter 4 + 3 + 2 + 1 = 10
