@@ -1,8 +1,8 @@
-numLines = int(input())
-leastTime = 100000000000000000
-myList = [int(input()) for x in range(numLines)]
-myList.sort()
-for i in range(len(myList) - 1):
+numLines = int(input()) #numLines
+leastTime = 100000000000000000 #start value iis biggest value so it gets reduced.
+myList = [int(input()) for x in range(numLines)] #creates list of inputs
+myList.sort() #sorts
+for i in range(len(myList) - 1): 
     totalTime = 0
     for j in range(0, i):
         totalTime += myList[i] - myList[j]
