@@ -1,0 +1,15 @@
+7
+1
+h
+3
+aab
+3
+xyz
+7
+ababbab
+9
+abceyzvpa
+8
+repeated
+11
+subsequence
